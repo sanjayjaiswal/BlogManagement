@@ -1,0 +1,72 @@
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body> -->
+  <div class="container blog-container">
+    <div class="textarea-outer">
+      <div class="textarea-inner">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg pb-3">
+            <button class="btn btn-primary" (click) = "blogHideShow();">New</button>
+          </div>
+        </div>
+        <div class="blog-area" *ngIf="newBlogShow">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg pb-3">
+              <textarea name="" id="" class="form-control" rows="5" [(ngModel)]="blog.blogText"></textarea>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-6">
+              <div class="d-flex justify-content-between">
+                <!-- <label>Created: UserName</label>
+                <label>Created Date: {{today}}</label> -->
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-6">
+              <div class="d-flex justify-content-end">
+                <!-- <button class="btn btn-primary mx-3">Edit</button> -->
+                <button class="btn btn-primary" (click)="Save()">Create</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ---------------- -->
+      <div>
+      <div class="blog-area">
+        <div class="row" *ngFor="let blog of blogList">
+            <div class="col-12 col-sm-12 col-md-12 col-lg pb-3">
+                <textarea name="" id="txt" class="form-control" rows="5" [(ngModel)]="blog.blogText" [disabled]="isDisabled">{{blog.blogText}}</textarea>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-6">
+                <div class="d-flex justify-content-between">
+                  <label>Created: {{blog.username}}</label>
+                  <label>Created Date: {{blog.dateCreated}}</label>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-6">
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary mx-3" *ngIf="isButtonEditVisible" (click)="EditBlog(blog.blogId);">Edit</button>
+                    <button class="btn btn-primary mx-3" *ngIf="isButtonUpdateVisible" (click)="UpdateBlog(blog.blogId,blog.blogText);">Update</button>
+                    <button class="btn btn-primary mx-3" (click)="DeleteBlog(blog.blogId);">Delete</button>
+                    <button class="btn btn-primary" *ngIf="isButtonCancelVisible" (click)="CancelBlog(blog.blogId);">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+      <!-- ---------------- -->
+    </div>
+  </div>
+<!-- </body>
+
+</html> -->

@@ -1,0 +1,16 @@
+
+
+.textarea-outer {
+    border: 1px solid rgba(0, 0, 0, .30);
+    padding: 1em;
+}
+.textarea-inner {
+    border: 1px solid rgba(0, 0, 0, .30);
+    padding: 1em;
+}
+
+.blog-area {
+    border: 1px solid rgba(0, 0, 0, .30);
+    padding: 1em;
+    margin-bottom: 1em;
+}
